@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-
+orders = []
 
 @app.route('/', methods=["GET"])
 def index():
     return render_template('index.html')
 
 
-@app.route('/pizza-order', methods=["GET"])
+@app.route('/pizza-order', methods=["GET", "POST"])
 def pizza_order():
     if request.method =="POST":
         _name = request.form.get("name")
