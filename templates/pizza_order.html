@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,25 @@
 </head>
 <body>
     <h1>Pizza rendelési ürlap!</h1>
+
+    <form method="post">
+        <fieldset>
+            <legend>Vevő adatai</legend>
+            NÉV: <input type="text" name ="name" required>
+            Telefon: <input type="tel" name ="phone" required><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Pizza méret!</legend>
+            <input type="radio" name ="size" value="kicsi" required> kicsi
+            <input type="radio" name ="size" value="nagy" > nagy
+            <input type="radio" name ="size" value="32 m²" > 32 m²
+        </fieldset>
+
+        <button type="reset">Visszaállitás</button>
+        <button type="submit">Elküldés</button>
+     </form>
 
     <a href="/">Vissza a föoldalra!</a>
 </body>

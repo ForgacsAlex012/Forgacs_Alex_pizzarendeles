@@ -10,6 +10,16 @@ def index():
 
 @app.route('/pizza-order', methods=["GET"])
 def pizza_order():
+    if request.method =="POST":
+        _name = request.form.get("name")
+        _phone = request.form.get("phone")
+        _size = request.form.get("size")
+        order ={
+            "name": _name,
+            "phone": _phone,
+            "size": _size}
+        orders.append(order)
+        print(orders)
     return render_template('pizza_order.html')
 
 if __name__ == "__main__":
