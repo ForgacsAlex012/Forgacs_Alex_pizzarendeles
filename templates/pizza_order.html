@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza rendelési ürlap!</title>
+    <title>Pizza rendelési űrlap</title>
 </head>
 <body>
-    <h1>Pizza rendelési ürlap!</h1>
+    <h1>Pizza rendelési űrlap!</h1>
 
     <form method="post">
         <fieldset>
             <legend>Vevő adatai</legend>
-            NÉV: <input type="text" name ="name" required>
-            Telefon: <input type="tel" name ="phone" required><br>
+            Név: <input type="text" name="name" required>
+            Telefon: <input type="tel" name="phone" required><br>
         </fieldset>
-
 
         <fieldset>
-            <legend>Pizza méret!</legend>
-            <input type="radio" name ="size" value="kicsi" required> kicsi
-            <input type="radio" name ="size" value="nagy" > nagy
-            <input type="radio" name ="size" value="32 m²" > 32 m²
+            <legend>Pizza méret</legend>
+            <input type="radio" name="size" value="kicsi" required> Kicsi
+            <input type="radio" name="size" value="nagy"> Nagy
         </fieldset>
 
-        <button type="reset">Visszaállitás</button>
-        <button type="submit">Elküldés</button>
-     </form>
+        <fieldset>
+            <legend>Feltétek</legend>
+            <input type="checkbox" name="toppings" value="sonka"> Sonka
+            <input type="checkbox" name="toppings" value="sajt"> Sajt
+            <input type="checkbox" name="toppings" value="gomba"> Gomba
+        </fieldset>
 
-    <a href="/">Vissza a föoldalra!</a>
+        <fieldset>
+            <legend>Mennyiség</legend>
+            <input type="number" name="quantity" min="1" value="1" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kért szállítási idő</legend>
+            <input type="time" name="delivery_time" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Egyéb kívánságok</legend>
+            <textarea name="comments" rows="3" cols="30"></textarea>
+        </fieldset>
+
+        <button type="reset">Visszaállítás</button>
+        <button type="submit">Elküldés</button>
+    </form>
+
+    <a href="/">Vissza a főoldalra</a>
 </body>
 </html>

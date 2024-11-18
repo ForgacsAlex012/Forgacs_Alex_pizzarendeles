@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendelés összegző oldal</title>
+</head>
+<body>
+    <h1>Rendelés összegzése</h1>
+    {% for order in orders %}
+        <div>
+            <p><strong>Név:</strong> {{ order.name }}</p>
+            <p><strong>Telefon:</strong> {{ order.phone }}</p>
+            <p><strong>Pizza méret:</strong> {{ order.size }}</p>
+            <p><strong>Feltétek:</strong> {{ ", ".join(order.toppings) }}</p>
+            <p><strong>Mennyiség:</strong> {{ order.quantity }}</p>
+            <p><strong>Kért szállítási idő:</strong> {{ order.delivery_time }}</p>
+            <p><strong>Egyéb kívánságok:</strong> {{ order.comments }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+    <a href="/pizza-order">Vissza a rendelési űrlaphoz</a>
+</body>
+</html>
